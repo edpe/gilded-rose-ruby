@@ -2,12 +2,12 @@
 
 source 'https://rubygems.org'
 
-git_source(:github) {|repo_name| 'https://github.com/#{repo_name}' }
+git_source(:github) { |_repo_name| 'https://github.com/#{repo_name}' }
 
 gem 'rubocop', require: false
 
 group :test do
   gem 'rspec'
+  gem 'simplecov', require: false
   gem 'timecop'
-  gem 'simplecov', :require => false
 end
