@@ -1,9 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ansi (1.5.0)
     ast (2.4.0)
     diff-lcs (1.3)
     docile (1.1.5)
+    hirb (0.7.3)
     json (2.1.0)
     parallel (1.12.1)
     parser (2.5.0.2)
@@ -30,11 +32,17 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.23.0)
+      rubocop (>= 0.52.1)
     ruby-progressbar (1.9.0)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
+    simplecov-console (0.4.2)
+      ansi
+      hirb
+      simplecov
     simplecov-html (0.10.2)
     timecop (0.9.1)
     unicode-display_width (1.3.0)
@@ -45,7 +53,9 @@ PLATFORMS
 DEPENDENCIES
   rspec
   rubocop
+  rubocop-rspec
   simplecov
+  simplecov-console
   timecop
 
 BUNDLED WITH

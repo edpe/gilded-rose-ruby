@@ -5,9 +5,11 @@ source 'https://rubygems.org'
 git_source(:github) { |_repo_name| 'https://github.com/#{repo_name}' }
 
 gem 'rubocop', require: false
+gem 'rubocop-rspec'
 
 group :test do
   gem 'rspec'
   gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
   gem 'timecop'
 end

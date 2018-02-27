@@ -14,5 +14,4 @@ describe Item do
       expect(item.to_s).to eq 'item, 10, 5'
     end
   end
-
 end
