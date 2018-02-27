@@ -3,6 +3,7 @@ require 'item'
 describe Item do
   subject(:item) { described_class.new('item', 10, 5) }
 
+
   it 'is initialised with name, sell_in and quality attributes' do
     expect(item.name).to eq 'item'
     expect(item.sell_in).to eq 10
