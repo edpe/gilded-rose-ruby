@@ -1,4 +1,5 @@
 require './lib/gilded_rose'
+require './lib/item'
 
 items = [
   Item.new(name = '+5 Dexterity Vest', sell_in = 10, quality = 20),
