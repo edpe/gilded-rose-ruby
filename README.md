@@ -32,3 +32,5 @@ I passed each test from my test suite one by one to ensure the correct behaviour
 
 
 ### what was left to do
+
+I still need to add the conjured item class and update the text test to work with the new classes. The Conjured Item class will use an decrement_quality private method that decreases by two each time but otherwise will be identical to the basic item class.
