@@ -3,10 +3,10 @@ require 'aged_brie'
 class BackstagePass < BasicItem
 
   def update_item
-   unless @quality >=50 || @quality < 0
-    increment_quality
-    @quality = 0 if sell_in_passed
-    end
+    unless @quality >= 50 || @quality < 0
+      increment_quality
+      @quality = 0 if sell_in_passed
+     end
     decrement_sell_in
   end
 
