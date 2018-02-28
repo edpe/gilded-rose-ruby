@@ -2,11 +2,11 @@ require 'item'
 
 class BasicItem < Item
   def update_item
-    decrement_sell_in
     unless @quality <= 0
       quality_multiplier = sell_in_passed ? 2 : 1
       quality_multiplier.times { decrement_quality }
     end
+    decrement_sell_in
   end
 
   private
@@ -20,6 +20,6 @@ class BasicItem < Item
   end
 
   def sell_in_passed
-    @sell_in < 0
+    @sell_in <= 0
   end
 end

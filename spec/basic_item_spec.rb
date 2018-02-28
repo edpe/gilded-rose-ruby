@@ -34,7 +34,7 @@ describe 'basic item' do
       expect(item.quality).to eq 0
     end
 
-    it 'reduces in twice as fast after sell by date' do
+    it 'reduces in quality twice as fast after sell by date' do
       item = BasicItem.new('foo', 0, 3)
       item.update_item
       expect(item.quality).to eq 1
