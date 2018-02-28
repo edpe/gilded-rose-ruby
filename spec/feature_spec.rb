@@ -3,22 +3,6 @@ require 'item'
 
 describe 'Gilded Rose' do
 
-  describe 'legendary items' do
-    it 'never has to be sold' do
-      items = [Item.new('Sulfuras, Hand of Ragnaros', 0, 80 )]
-      gilded_rose = GildedRose.new(items)
-      gilded_rose.update_quality
-      expect(items[0].sell_in).to eq 0
-    end
-
-    it 'will not change in quality' do
-      items = [Item.new('Sulfuras, Hand of Ragnaros', 0, 80 )]
-      gilded_rose = GildedRose.new(items)
-      gilded_rose.update_quality
-      expect(items[0].quality).to eq 80
-    end
-  end
-
   describe 'aged brie' do
     it 'increases in quality the older it gets' do
       items = [Item.new('Aged Brie', 2, 0 )]

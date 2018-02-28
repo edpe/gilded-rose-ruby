@@ -1,9 +1,9 @@
 require 'basic_item'
 
-describe 'basic items' do
+describe 'basic item' do
 
   context 'inherits attributes from item class' do
-    it 'is initialised with name, sell_in and quality attributes' do
+    it 'initialises with name, sell_in and quality attributes' do
       item = BasicItem.new('foo', 0, 0)
       expect(item).to respond_to(:name)
       expect(item).to respond_to(:quality)
