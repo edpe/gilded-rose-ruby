@@ -1,7 +1,6 @@
 require 'item'
 
 class BasicItem < Item
-
   def update_item
     decrement_sell_in
     unless @quality <= 0
@@ -10,7 +9,7 @@ class BasicItem < Item
     end
   end
 
-private
+  private
 
   def decrement_sell_in
     @sell_in -= 1
@@ -23,5 +22,4 @@ private
   def sell_in_passed
     @sell_in < 0
   end
-
 end
