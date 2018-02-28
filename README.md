@@ -28,5 +28,7 @@ There were a lot of basic syntax issues to deal with; Rubocop was helpful in ide
 
 Since the Item class could not be changed (it belongs to a grumpy goblin apparently), I decided to create a class for each type of object. Each object behaved differently over time in terms of the quality attribute, and the way that I grouped the tests seemed to be logical in terms of how responsibilities were divided up. I maintained the original Item class, with my new item classes inheriting attributes of quality, sell by date and name.
 
+I passed each test from my test suite one by one to ensure the correct behaviour was preserved.
+
 
 ### what was left to do
