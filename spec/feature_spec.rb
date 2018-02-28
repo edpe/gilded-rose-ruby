@@ -3,37 +3,6 @@ require 'item'
 
 describe 'Gilded Rose' do
 
-  describe 'basic items' do
-
-    it 'cannot have a negative quality value' do
-      items = [Item.new('foo',0, 0 )]
-      gilded_rose = GildedRose.new(items)
-      gilded_rose.update_quality
-      expect(items[0].quality).to eq 0
-    end
-
-    it 'reduces sell by date by one after one day' do
-      items = [Item.new('foo',1, 1 )]
-      gilded_rose = GildedRose.new(items)
-      gilded_rose.update_quality
-      expect(items[0].sell_in).to eq 0
-    end
-
-    it 'reduces quality by one after one day' do
-      items = [Item.new('foo',1, 1 )]
-      gilded_rose = GildedRose.new(items)
-      gilded_rose.update_quality
-      expect(items[0].quality).to eq 0
-    end
-
-    it 'lowers quality twice as fast after sell by date' do
-      items = [Item.new('foo', 0, 3 )]
-      gilded_rose = GildedRose.new(items)
-      gilded_rose.update_quality
-      expect(items[0].quality).to eq 1
-    end
-  end
-
   describe 'legendary items' do
     it 'never has to be sold' do
       items = [Item.new('Sulfuras, Hand of Ragnaros', 0, 80 )]
