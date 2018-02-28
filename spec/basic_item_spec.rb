@@ -1,8 +1,7 @@
 require 'basic_item'
 
 describe 'basic item' do
-
-  context 'inherits attributes from item class' do
+  context 'inherit attributes from item class' do
     it 'initialises with name, sell_in and quality attributes' do
       item = BasicItem.new('foo', 0, 0)
       expect(item).to respond_to(:name)
@@ -16,27 +15,27 @@ describe 'basic item' do
     end
   end
 
-  context 'behaviour' do
+  context '#update_item' do
     it 'cannot have a negative quality value' do
-      item = BasicItem.new('foo',0, 0 )
+      item = BasicItem.new('foo', 0, 0)
       item.update_item
       expect(item.quality).to eq 0
     end
 
     it 'reduces sell by date by one after one day' do
-      item = BasicItem.new('foo',1, 1 )
+      item = BasicItem.new('foo', 1, 1)
       item.update_item
       expect(item.sell_in).to eq 0
     end
 
     it 'reduces in quality by one after one day' do
-      item = BasicItem.new('foo',1, 1 )
+      item = BasicItem.new('foo', 1, 1)
       item.update_item
       expect(item.quality).to eq 0
     end
 
     it 'reduces in twice as fast after sell by date' do
-      item = BasicItem.new('foo', 0, 3 )
+      item = BasicItem.new('foo', 0, 3)
       item.update_item
       expect(item.quality).to eq 1
     end
