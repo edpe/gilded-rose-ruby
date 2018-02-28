@@ -1,6 +1,6 @@
-require 'backstage_passes'
+require 'backstage_pass'
 
-describe 'backstage passes' do
+describe 'backstage pass' do
 
   context 'inherit attributes from item class' do
     it 'initialises with name, sell_in and quality attributes' do
