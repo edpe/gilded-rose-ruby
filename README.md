@@ -2,7 +2,7 @@ Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime
 
 Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."*
 
-##Rules
+## Rules
 
 All items have a SellIn value which denotes the number of days we have to sell the item. All items have a Quality value which denotes how valuable the item is. At the end of each day our system lowers both values for every item. Pretty simple, right? Well this is where it gets interesting:
 
@@ -22,7 +22,7 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 * “Conjured” items degrade in Quality twice as fast as normal items
 
-### approach
+### Approach
 
 There were a lot of basic syntax issues to deal with; Rubocop was helpful in identifying and correcting some of them. There were also very few tests, and the tests that there were were broken and even when fixed, were not particularly helpful. I began by writing a suite of feature tests which described the behaviour in the brief.
 
@@ -31,6 +31,6 @@ Since the Item class could not be changed (it belongs to a grumpy goblin apparen
 I passed each test from my test suite one by one to ensure the correct behaviour was preserved.
 
 
-### what was left to do
+### What was left to do
 
 I still need to add the conjured item class and update the text test to work with the new classes. The Conjured Item class will use an decrement_quality private method that decreases by two each time but otherwise will be identical to the basic item class.
