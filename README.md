@@ -1,3 +1,6 @@
+# Gilded Rose
+## The Test
+
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a prominent city run by a friendly innkeeper named Allison. We also buy and sell only the finest goods. Unfortunately, our goods are constantly degrading in quality as they approach their sell by date. We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that we can begin selling a new category of items. First an introduction to our system:
 
 Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."*
@@ -22,7 +25,7 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 * “Conjured” items degrade in Quality twice as fast as normal items
 
-### Approach
+### My approach
 
 There were a lot of basic syntax issues to deal with; Rubocop was helpful in identifying and correcting some of them. There were also very few tests, and the tests that there were were broken and even when fixed, were not particularly helpful. I began by writing a suite of feature tests which described the behaviour in the brief.
 
